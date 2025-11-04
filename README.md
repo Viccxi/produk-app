@@ -1,17 +1,47 @@
-# 🛍️ Haxovica Store
+<h1 align="center">🛍️ Haxovica Store</h1>
+<p align="center">
+  <b>Aplikasi Web Laravel 12 dengan Tema Dark Elegant</b><br>
+  CRUD Produk & Kategori • Upload Gambar • Pagination • Auth Kustom
+</p>
 
-**Haxovica Store** adalah aplikasi web berbasis Laravel 12 yang dirancang untuk mempermudah pengelolaan data produk dan kategori.  
-Fitur utama meliputi:
-- Sistem autentikasi (Login & Register) dengan tambahan field No HP, Jenis Kelamin, dan Alamat.
-- CRUD (Create, Read, Update, Delete) untuk Produk dan Kategori.
-- Upload & Preview Gambar Produk.
-- Relasi antar entitas (Produk — Kategori).
-- Pencarian dan Pagination.
-- Tampilan modern dengan tema **Dark Elegant Haxovica**.
+<p align="center">
+  <img src="public/screenshots/preview.png" width="80%" alt="Haxovica Store Preview">
+</p>
+
+<p align="center">
+  <a href="https://github.com/Viccxi/produk-app/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Viccxi/produk-app?color=ff6f61&style=for-the-badge">
+  </a>
+  <a href="https://github.com/Viccxi/produk-app/stargazers">
+    <img src="https://img.shields.io/github/stars/Viccxi/produk-app?color=ff6f61&style=for-the-badge">
+  </a>
+  <a href="https://github.com/Viccxi/produk-app">
+    <img src="https://img.shields.io/badge/Laravel-12.x-ff6f61?style=for-the-badge&logo=laravel&logoColor=white">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Status-Active-ff6f61?style=for-the-badge">
+  </a>
+</p>
 
 ---
 
-## ⚙️ **Kebutuhan Sistem**
+## 🧾 Deskripsi
+
+**Haxovica Store** adalah aplikasi web berbasis **Laravel 12** untuk mengelola data produk dan kategori.  
+Aplikasi ini dikembangkan dengan arsitektur **MVC Laravel** dan tampilan bertema **Dark Elegant Haxovica**, modern serta responsif.  
+
+### ✨ Fitur Utama
+- 🔐 **Login & Register Custom** (Nama, Email, Password, No HP, Jenis Kelamin, Alamat)
+- 📦 **CRUD Produk & Kategori**
+- 🖼️ **Upload dan Preview Gambar Produk**
+- 🔍 **Pencarian dan Pagination**
+- 💾 **Relasi antar entitas (Produk ↔ Kategori)**
+- 🎨 **Tema Gelap Modern dengan warna utama #ff6f61**
+
+---
+
+## ⚙️ Kebutuhan Sistem
+
 | Komponen | Versi Minimum |
 |-----------|----------------|
 | PHP | 8.2 |
@@ -19,96 +49,54 @@ Fitur utama meliputi:
 | MySQL | 8.x |
 | Composer | 2.x |
 | Node.js & NPM | Terinstal |
-| MAMP / XAMPP | untuk server lokal |
+| MAMP / XAMPP | Server lokal |
 | Browser | Chrome / Edge / Firefox |
 
 ---
 
-## 🖼️ **Tampilan**
-| Halaman   | Cuplikan                                       |
-| --------- | ---------------------------------------------- |
-| Login     | ![Register](/Users/macbook/Documents/GitHub/produk-app/storage/screenshoots/register.png)         |
-| Dashboard | ![Dashboard](/Users/macbook/Documents/GitHub/produk-app/storage/screenshoots/dashboard.png) |
-| Produk    | ![Produk](/Users/macbook/Documents/GitHub/produk-app/storage/screenshoots/products.png)     |
+## 🖼️ Tampilan
+
+| Halaman | Cuplikan |
+|----------|-----------|
+| **Login** | ![Login](public/screenshots/login.png) |
+| **Dashboard** | ![Dashboard](public/screenshots/dashboard.png) |
+| **Produk** | ![Produk](public/screenshots/products.png) |
+
+> 📸 Simpan screenshot kamu di folder `public/screenshots/` agar otomatis muncul di README.
 
 ---
 
-## 🗂️ **Struktur Folder**
+## 🗂️ Struktur Folder
+
+```bash
 .
 ├── LICENSE
 ├── README.md
-├── STRUCTURE.txt
 ├── app
-│   ├── Http
-│   ├── Models
-│   ├── Providers
-│   └── View
-├── artisan
-├── bootstrap
-│   ├── app.php
-│   ├── cache
-│   └── providers.php
-├── composer.json
-├── composer.lock
-├── config
-│   ├── app.php
-│   ├── auth.php
-│   ├── cache.php
-│   ├── database.php
-│   ├── filesystems.php
-│   ├── logging.php
-│   ├── mail.php
-│   ├── queue.php
-│   ├── services.php
-│   └── session.php
+│   ├── Http
+│   │   └── Controllers
+│   ├── Models
+│   └── Providers
 ├── database
-│   ├── factories
-│   ├── migrations
-│   └── seeders
-├── package-lock.json
-├── package.json
-├── phpunit.xml
-├── postcss.config.js
+│   ├── factories
+│   ├── migrations
+│   └── seeders
 ├── public
-│   ├── css
-│   ├── favicon.ico
-│   ├── index.php
-│   └── robots.txt
+│   ├── css
+│   ├── screenshots
+│   │   ├── preview.png
+│   │   ├── login.png
+│   │   ├── dashboard.png
+│   │   └── products.png
+│   └── index.php
 ├── resources
-│   ├── css
-│   ├── js
-│   ├── sass
-│   └── views
+│   ├── css
+│   ├── js
+│   └── views
+│       ├── layouts
+│       ├── products
+│       └── categories
 ├── routes
-│   ├── auth.php
-│   ├── console.php
-│   └── web.php
-├── tailwind.config.js
-├── tests
-│   ├── Feature
-│   ├── Pest.php
-│   ├── TestCase.php
-│   └── Unit
+│   ├── web.php
+│   └── auth.php
 └── vite.config.js
-
-24 directories, 32 files
-
----
-
-## 🗂️ **Struktur (ringkas)**
-app/Http/Controllers/   → ProductController, CategoryController
-app/Models/             → Product, Category, User
-database/migrations/    → users, categories, products
-database/seeders/       → DatabaseSeeder
-resources/views/        → layouts/, products/, categories/
-public/screenshots/     → gambar README
-
----
-
-## 🚀 **Langkah Instalasi**
-
-1. **Clone repository**
-   ```bash
-   git clone https://github.com/viccxi/produk-app.git
-   cd produk-app
-
