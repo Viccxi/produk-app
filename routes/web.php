@@ -23,3 +23,18 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+use App\Models\Product;
+use App\Models\Category;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
+Route::get('/dashboard', function () {
+    $totalProducts = Product::count();
+    $totalCategories = Category::count();
+
+    $chartData = Category::withCount('products')
+        ->get(['name', 'products_count']);
+
+    return view('dashboard', compact('totalProducts', 'totalCategories', 'chartData'));
+})->middleware(['auth'])->name('dashboard');

@@ -12,4 +12,10 @@ class Category extends Model
     protected $fillable = [
         'name',
     ];
+
+    // Relasi: satu kategori punya banyak produk
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
