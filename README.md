@@ -24,9 +24,91 @@ Fitur utama meliputi:
 
 ---
 
+## 🖼️ **Tampilan**
+| Halaman   | Cuplikan                                       |
+| --------- | ---------------------------------------------- |
+| Login     | ![Register](/Users/macbook/Documents/GitHub/produk-app/storage/screenshoots/register.png)         |
+| Dashboard | ![Dashboard](/Users/macbook/Documents/GitHub/produk-app/storage/screenshoots/dashboard.png) |
+| Produk    | ![Produk](/Users/macbook/Documents/GitHub/produk-app/storage/screenshoots/products.png)     |
+
+---
+
+## 🗂️ **Struktur Folder**
+.
+├── LICENSE
+├── README.md
+├── STRUCTURE.txt
+├── app
+│   ├── Http
+│   ├── Models
+│   ├── Providers
+│   └── View
+├── artisan
+├── bootstrap
+│   ├── app.php
+│   ├── cache
+│   └── providers.php
+├── composer.json
+├── composer.lock
+├── config
+│   ├── app.php
+│   ├── auth.php
+│   ├── cache.php
+│   ├── database.php
+│   ├── filesystems.php
+│   ├── logging.php
+│   ├── mail.php
+│   ├── queue.php
+│   ├── services.php
+│   └── session.php
+├── database
+│   ├── factories
+│   ├── migrations
+│   └── seeders
+├── package-lock.json
+├── package.json
+├── phpunit.xml
+├── postcss.config.js
+├── public
+│   ├── css
+│   ├── favicon.ico
+│   ├── index.php
+│   └── robots.txt
+├── resources
+│   ├── css
+│   ├── js
+│   ├── sass
+│   └── views
+├── routes
+│   ├── auth.php
+│   ├── console.php
+│   └── web.php
+├── tailwind.config.js
+├── tests
+│   ├── Feature
+│   ├── Pest.php
+│   ├── TestCase.php
+│   └── Unit
+└── vite.config.js
+
+24 directories, 32 files
+
+---
+
+## 🗂️ **Struktur (ringkas)**
+app/Http/Controllers/   → ProductController, CategoryController
+app/Models/             → Product, Category, User
+database/migrations/    → users, categories, products
+database/seeders/       → DatabaseSeeder
+resources/views/        → layouts/, products/, categories/
+public/screenshots/     → gambar README
+
+---
+
 ## 🚀 **Langkah Instalasi**
 
 1. **Clone repository**
    ```bash
    git clone https://github.com/viccxi/produk-app.git
    cd produk-app
+
